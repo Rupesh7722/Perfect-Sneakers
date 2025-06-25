@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= name %> </title>
+    <link rel="stylesheet" href="/specific.css">
+    <script>
+        function changeShoeDetails(index) {
+            const imageElement = document.getElementById("shoe_img");
+            const priceElement = document.getElementById("price");
+            const linkElement = document.getElementById("product_link");
+            const sizeElement = document.getElementById("size");
+            const colorElement = document.getElementById("color");
+
+            // Update the image, price, and product link
+            imageElement.src = window.shoeData[index].image_link;
+            priceElement.textContent = window.shoeData[index].price;
+            linkElement.href = window.shoeData[index].product_link;
+            sizeElement.textContent = window.shoeData[index].sizes;
+            colorElement.textContent = window.shoeData[index].color;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="<%= image_link[0] %>" alt="shoes_img" id="shoe_img">
+        </div>
+
+
+        
+        <div class="color-buttons">
+            <h1 style="font-size: 3rem;"><a id="product_link" href="<%= product_link[0] %>"><%= name1[0] %></a></h4>
+            <h3 style="font-size: 1.5rem;">Brand: <%= brand[0] %></h5>
+            <h3 style="font-size: 1.5rem;">Price: <span id="price"><%= price[0] %></span></h4>
+            <h3 style="font-size: 1.5rem;">Color: <span id="color"><%= color[0] %></span></h5>
+            <h3 style="font-size: 1.5rem;">Size: <span id="size"><%= sizes[0] %></span></h5>  
+            <h2 style="font-size: 2rem;">Colors available:</h3>
+
+            <div class="colors">
+                <% for (let i = 0; i < color.length; i++) { %>
+                    <button class="color-button" onclick="changeShoeDetails(<%=i%>)">
+                        <img src="<%= image_link[i] %>" alt="Color <%= color[i] %>" class="button-image">
+                        
+                    </button>
+                <% } %>
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+    <script>
+        window.shoeData = [
+            <% for (let i = 0; i < id.length; i++) { %>
+                {
+                    id: "<%= id[i] %>",
+                    image_link: "<%= image_link[i] %>",
+                    product_link: "<%= product_link[i] %>",
+                    price: "<%= price[i] %>",
+                    color: "<%= color[i] %>",
+                    sizes: "<%= sizes[i] %>"
+                }<% if (i < id.length - 1) { %>,<% } %>
+            <% } %>
+        ];
+    </script>
+</body>
+</html>

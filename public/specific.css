@@ -1,0 +1,69 @@
+@font-face{
+    font-family: myfont;
+    src: url("LoveYaLikeASister-Regular.ttf");
+}
+a{
+    color: #CF8150;
+}
+
+body{
+    background-color: #DEDEDD;
+    font-family: myfont;
+}
+.container {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+#shoe_img {
+    height: 500px;
+    width: 350px;
+}
+
+.color-buttons {
+gap: 10px;
+}
+
+.color-button {
+border: none;
+margin: 5px;
+padding: 0;
+background-color: transparent;
+cursor: pointer;
+position: relative;
+width: 60px;
+height: 60px;
+overflow: hidden;
+border-radius: 50%; /* Circular buttons */
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 12px;
+color: #fff;
+background-color: #333; /* Default background for text contrast */
+}
+
+.color-button img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensure image covers the button without distortion */
+border-radius: 50%; /* Match button shape */
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0.9; /* Slightly transparent image for text visibility */
+}
+
+.color-button span {
+z-index: 1;
+position: relative;
+}
+
+.color-button:hover img {
+opacity: 1; /* Full opacity on hover for clearer image */
+}
+.colors{
+display: flex;
+flex-wrap: wrap;
+}

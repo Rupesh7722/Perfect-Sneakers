@@ -1,0 +1,62 @@
+.container{
+    display: inline-block;
+    height: 520px;
+    width: 280px;
+    margin-right: 45px;
+    margin-bottom: 90px;
+    transition: box-shadow 370ms ease-in-out;
+}
+
+.cont-a{
+    font-size: large;
+}
+
+.container-bottom{
+    height: 155px;
+    width: 280px;
+    background-color: white;
+    transition: height 0.4s ease-in-out;
+}
+
+
+
+.container:hover{
+    box-shadow: 6px 6px 10px 5px #D08B5C;
+    .container-bottom{
+        height: 170px;
+    }
+    #shoe_img{
+        height: 350px;
+    }
+}
+
+#shoe_img{
+    height: 365px;
+    width: 280px;
+    transition: height 0.4s ease-in-out;
+}
+
+@font-face{
+    font-family: myfont;
+    src: url("LoveYaLikeASister-Regular.ttf");
+}
+
+h1{
+    color: #CF8150;
+    font-size: 4rem;
+    text-align: center;
+    font-family: myfont;
+}
+
+body{
+    background-color: white;
+}
+
+.big-container{
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}

@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    height: 75px;
+    display: flex;
+    align-items: flex-end;
+    background-color:#DFDEDD;
+    /* background-color:#CEBEBE; */
+    justify-content: space-between;
+}
+
+.nav-logo{
+    border-radius: 4px;
+    background-image: url("Logo.png");
+    background-size: cover;
+    height: 75px;
+    width:  120px;
+    background-image: cover;
+    
+}
+
+.Options{
+    width:600px;
+    height: 75px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+@font-face{
+    font-family: myfont;
+    src: url("LoveYaLikeASister-Regular.ttf");
+}
+
+.opt{
+    margin-left: 22px;
+    font-family: myfont;
+    font-weight: 900px;
+    font-size: 2rem;
+    width: fit-content; 
+    height: fit-content;
+}
+
+a{
+    color: black;
+}
+
+.opt{
+    transition: font-size 150ms ease-in ;
+}
+
+.opt:hover{
+    font-size: 2.5rem;
+}
+
+
+.hero-image{
+    background-image: url("Herofinal.jpg");
+    background-size : cover;
+    height: 850px;
+}
+
+@keyframes effect {
+    form{
+        font-size: 2rem;
+    }
+    To{
+        
+    }
+}
+
+.Options a{
+    text-decoration: none;
+}
