@@ -5,7 +5,7 @@ const path = require("path");
 const Shoe = require("./models/shoe.js");
 const mongoose = require("mongoose");
 
-const baseUrl = process.env.BASE_URL || "http://localhost:8080";
+const baseUrl = process.env.BASE_URL ;
 
 main()
     .then(() => console.log("connection successful"))
