@@ -1,38 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Shoes </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Perfect Sneakers</h1>
-    <div class="big-container">
-        <% for(let i=0;i<id1.length; i++){ %>
-            
-                <div class="container">
-                    <a href="http://localhost:8080/all/<%=name1[i]%>">
-                        <img src="<%=image_link1[i]%>" alt="shoes_img" id="shoe_img">
-                    </a> 
-                    <a href="http://localhost:8080/all/<%=name1[i]%>">
-                        <div class="container-bottom">
-                            <span class="cont-a"><a href="http://localhost:8080/all/<%=name1[i]%>"><%=name1[i]%></a></span>
-                            <h5>Brand:<%=brand1[i]%></h5>
-                            <h4>Starting from <%=price1[i]%></h4> 
-                        </div>
-                    </a>    
-                        
-                    
-                </div>
-            
-            
-    
-        <%}%>
-
+<!-- all.ejs -->
+<a href="<%= baseUrl %>/all/<%=name1[i]%>">
+    <img src="<%=image_link1[i]%>" alt="shoes_img" id="shoe_img">
+</a> 
+<a href="<%= baseUrl %>/all/<%=name1[i]%>">
+    <div class="container-bottom">
+        <span class="cont-a"><a href="<%= baseUrl %>/all/<%=name1[i]%>"><%=name1[i]%></a></span>
+        <h5>Brand:<%=brand1[i]%></h5>
+        <h4>Starting from <%=price1[i]%></h4> 
     </div>
-
-
-    
-</body>
-</html>
+</a>
